@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+archivesBaseName = 'CATSQueueHandler'
+version = '1.0-SNAPSHOT' 
+repositories {
+    maven { url "https://repo.spring.io/libs-release" }
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile  'org.springframework.boot:spring-boot-starter-amqp:1.2.0.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-security:1.2.0.RELEASE'
+    compile 'org.springframework.data:spring-data-commons:1.9.1.RELEASE'
+    compile 'com.googlecode.json-simple:json-simple:1.1'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'org.apache.httpcomponents:httpclient:4.5.3'
+}
